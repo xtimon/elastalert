@@ -9,6 +9,5 @@ RUN apk add --no-cache ${PACKAGES_FOR_BUILD} ca-certificates &&\
     apk del ${PACKAGES_FOR_BUILD} &&\
     rm -rf /root/.cache
 
-ENTRYPOINT ["elastalert-create-index","--config","/config.yml"]
-
-CMD ["elastalert","--config","/config.yml"]
+CMD elastalert-create-index --config /config.yml --index elastalert_status --old-index '' &&\
+    elastalert --config /config.yml
