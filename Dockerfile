@@ -1,6 +1,6 @@
 FROM python:2-alpine
 
-ENV VERSION=0.1.10 \
+ENV VERSION=0.1.21 \
     PACKAGES_FOR_BUILD="gcc musl-dev libffi-dev openssl-dev"
 
 # ElastAlert installation
